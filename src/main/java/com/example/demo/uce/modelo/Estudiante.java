@@ -2,7 +2,10 @@ package com.example.demo.uce.modelo;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.SequenceGenerator;
 import jakarta.persistence.Table;
 //debo colocar estas dos anotaciones para enviar metadata
 @Entity
@@ -10,6 +13,8 @@ import jakarta.persistence.Table;
 public class Estudiante {
 	
 	@Id //ANOTACION PARA DETERMINAR LA PK
+	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "estu_sec")//generarlo como secuencia
+	@SequenceGenerator(name = "estu_sec", sequenceName = "estu_sec", allocationSize = 1)
 	@Column(name="estu_id")// ANOTACION PARA ASOCIAR LA COLUMNA
 	private Integer id;
 	
@@ -76,6 +81,12 @@ public class Estudiante {
 
 	public void setCiudad(String ciudad) {
 		this.ciudad = ciudad;
+	}
+
+	@Override
+	public String toString() {
+		return "Estudiante [id=" + id + ", nombre=" + nombre + ", apellido=" + apellido + ", genero=" + genero
+				+ ", cedula=" + cedula + ", ciudad=" + ciudad + "]";
 	}
 	
 	
