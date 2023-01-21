@@ -1,10 +1,15 @@
 package com.example.demo;
 
+import java.math.BigDecimal;
+import java.time.LocalDateTime;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import com.example.demo.uce.modelo.Ciudadano;
+import com.example.demo.uce.modelo.Empleado;
 import com.example.demo.uce.modelo.Estudiante;
 import com.example.demo.uce.repository.IEstudianteRepo;
 import com.example.demo.uce.service.IEstudianteService;
@@ -35,6 +40,18 @@ public class ProyectoPaU2HcApplication implements CommandLineRunner {
 //		Estudiante estu1= this.estudianteService.buscar(4);
 //		System.out.println(estu1);
 		//si quiero actualizar siempre debo tener en cuenta que  tiene que estar presente la primary key en la consulta 
+		
+		
+		Ciudadano ciudadano=  new Ciudadano();
+		 ciudadano.setNombre("Henry");
+		 ciudadano.setApellido("Coyago");
+		  Empleado empleado= new Empleado();
+		   empleado.setSalario(new BigDecimal(20));
+		   empleado.setFechaIngreso(LocalDateTime.now());
+		   empleado.setCiudadano(ciudadano);
+		   
+		   ciudadano.setEmpleado(empleado);
+		
 		
 	}
 
