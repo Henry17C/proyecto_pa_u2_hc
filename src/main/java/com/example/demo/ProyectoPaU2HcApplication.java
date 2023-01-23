@@ -55,6 +55,7 @@ public class ProyectoPaU2HcApplication implements CommandLineRunner {
 		 ciudadano.setNombre("Henry");
 		 ciudadano.setApellido("Coyago");
 		 //this.ciudadanoService.insertar(ciudadano);
+		 
 		 //EMPLEADO
 		  Empleado empleado= new Empleado();
 		   empleado.setSalario(new BigDecimal(20));
@@ -65,20 +66,21 @@ public class ProyectoPaU2HcApplication implements CommandLineRunner {
 		   ciudadano.setEmpleado(empleado);
 		   
 		  //OPERACIONES CRUD CIUDADANO
-		   Ciudadano ciudadano2= this.ciudadanoService.buscar(13);
+		   Ciudadano ciudadano2= this.ciudadanoService.buscar(12);
 		   ciudadano2.setApellido("Reinoso");
 		   ciudadanoService.actualizar(ciudadano2);
-		   ciudadanoService.eliminar(11);
+		   ciudadanoService.eliminar(12);
 //		   System.out.println(ciudadano2);
 		   
 		   
 		   
 		 //OPERACIONES CRUD EMPLEADO
-//		   //this.empleadoService.insertar(empleado);
+		   //this.empleadoService.insertar(empleado);
 //		   Empleado empleado2=this.empleadoService.buscar(5);
 //		   empleado2.setSalario(new BigDecimal(300));
 //		   this.empleadoService.actualizar(empleado2);
-//		   //this.empleadoService.buscar();
+//		   empleadoService.eliminar(5);
+
 		   
 		  
 		
@@ -92,23 +94,7 @@ public class ProyectoPaU2HcApplication implements CommandLineRunner {
 		   
 		   
 		   
-		   
-		  // ciudadanoService.insertar(ciudadano);//esta
-//		   Ciudadano c=ciudadanoService.buscar(8);
-//		   c.setApellido("Reinos");
-//		   ciudadanoService.actualizar(c);
-//		   ciudadanoService.eliminar(8);
-		   
-		   
-//		   empleadoService.insertar(empleado);
-//		   empleadoService.eliminar(1);
-			  
-//		   Empleado e= empleadoService.buscar(2);
-//		   System.out.println("Salario: "+e.getSalario());
-//		   e.setSalario(new BigDecimal(20000));
-//		   empleadoService.actualizar(e);
-		   
-		  // System.out.println(e);
+
 		  
 		   
 		   
