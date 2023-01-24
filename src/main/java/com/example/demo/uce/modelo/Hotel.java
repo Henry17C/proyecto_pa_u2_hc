@@ -64,6 +64,16 @@ public class Hotel {
 	public void setDireccion(String direccion) {
 		this.direccion = direccion;
 	}
+
+
+	public List<Habitacion> getHabitaciones() {
+		return habitaciones;
+	}
+
+
+	public void setHabitaciones(List<Habitacion> habitaciones) {
+		this.habitaciones = habitaciones;
+	}
 	
 	
 	
