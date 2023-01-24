@@ -33,23 +33,7 @@ public class ProyectoPaU2HcApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		// TODO Auto-generated method stub
-//		Estudiante estu= new Estudiante();
-//		estu.setApellido("Coyago");
-//		estu.setCedula("1755536511");
-//		estu.setCiudad("Quito");
-//		estu.setGenero("M");
-////		estu.setId(4); ya no la necesito pues uso secuencias
-//		estu.setNombre("Pedro");;
-//		this.estudianteService.agregar(estu);
-//		this.estudianteService.modificar(estu);
-//		this.estudianteService.borrar(4);
-//		
-		
-//		Estudiante estu1= this.estudianteService.buscar(4);
-//		System.out.println(estu1);
-		//si quiero actualizar siempre debo tener en cuenta que  tiene que estar presente la primary key en la consulta 
-		
+/*
 		//CIUDADANO
 		Ciudadano ciudadano=  new Ciudadano();
 		 ciudadano.setNombre("Henry");
@@ -72,23 +56,33 @@ public class ProyectoPaU2HcApplication implements CommandLineRunner {
 		   ciudadanoService.eliminar(12);
 //		   System.out.println(ciudadano2);
 		   
-		   
-		   
-		 //OPERACIONES CRUD EMPLEADO
-		   //this.empleadoService.insertar(empleado);
-//		   Empleado empleado2=this.empleadoService.buscar(5);
-//		   empleado2.setSalario(new BigDecimal(300));
-//		   this.empleadoService.actualizar(empleado2);
-//		   empleadoService.eliminar(5);
-
-		   
-		  
+		*/ 
 		
+		/*
+		   Empleado empleado2= new Empleado();
+		   empleado2.setSalario(new BigDecimal(20));
+		   empleado2.setFechaIngreso(LocalDateTime.now());
 		   
+		   empleadoService.insertar(empleado2);
+		   */
 		   
-		   
-		   
-		   
+		   //INSET CON CASCADA
+//		Ciudadano ciudadano=  new Ciudadano();
+//		 ciudadano.setNombre("Henry");
+//		 ciudadano.setApellido("Coyago");
+//		 //this.ciudadanoService.insertar(ciudadano);
+//		 
+//		 //EMPLEADO
+//		  Empleado empleado= new Empleado();
+//		   empleado.setSalario(new BigDecimal(20));
+//		   empleado.setFechaIngreso(LocalDateTime.now());
+//		   
+//		   empleado.setCiudadano(ciudadano); 
+//		   ciudadano.setEmpleado(empleado);
+//		   //ciudadanoService.insertar(ciudadano);
+//		   empleadoService.insertar(empleado);
+
+			
 		   
 		   
 		   
