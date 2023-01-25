@@ -38,7 +38,7 @@ public class ProyectoPaU2HcApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-
+/*
 		
 		Hotel hotel= new Hotel();
 		hotel.setNombre("Hilton colon");
@@ -52,16 +52,46 @@ public class ProyectoPaU2HcApplication implements CommandLineRunner {
 		hotel.setHabitaciones(h);
 		habi.setHotel(hotel);
 		hotelService.insertar(hotel);
-		Hotel hotel1=hotelService.buscar(5);
-		hotel1.setNombre("Gran Colombia"); 
+	*/	
 		
-		hotelService.actualizar(hotel1);   
-		hotelService.borrar(1);
+		
+		//hotel1.setNombre("Gran Colombia"); 
+//	
+		
+	//hotelService.actualizar(hotel1);   
+//		hotelService.borrar(1);
 
+	
+		
+		/*
+		Hotel hotel1=hotelService.buscar(1);
+		  Habitacion habitacion= new Habitacion();
+		 
+		  habitacion.setHotel(hotel1);
+		  habitacion.setNumero("A3");
 		  
+		 
+		  habitacionService.insertar(habitacion);
+		*/
+		
+		
+		  
+		/*
+		//eliminar una habitacion sin casdade, afecta unicamente a la habitacion mas no a el hotel
+		 Habitacion h2= habitacionService.buscar(9);
+		  habitacionService.eliminar(9);  
+	*/	 
+		
+		
+		  Hotel hotel= hotelService.buscar(1);
+		
+		  
+	 hotel.getHabitaciones().forEach(System.out::println);
+		  
+		 // hotel.getHabitaciones().stream().forEach(System.out::println);
+		 // habitaciones.stream().forEach(System.out::println);
 		   
-		   
-		   
+		   //colsultar hotel nombre e imprimir todas sus habitaciones
 		 
 		   
 		
