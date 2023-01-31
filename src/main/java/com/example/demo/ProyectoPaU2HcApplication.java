@@ -3,19 +3,24 @@ package com.example.demo;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import com.example.demo.uce.modelo.Autor;
 import com.example.demo.uce.modelo.Ciudadano;
 import com.example.demo.uce.modelo.Empleado;
 import com.example.demo.uce.modelo.Estudiante;
 import com.example.demo.uce.modelo.Habitacion;
 import com.example.demo.uce.modelo.Hotel;
+import com.example.demo.uce.modelo.Libro;
 import com.example.demo.uce.repository.IEstudianteRepo;
+import com.example.demo.uce.service.IAutorService;
 import com.example.demo.uce.service.ICiudadanoService;
 import com.example.demo.uce.service.IEmpleadoService;
 import com.example.demo.uce.service.IEstudianteService;
@@ -29,6 +34,8 @@ public class ProyectoPaU2HcApplication implements CommandLineRunner {
 	
 	@Autowired
 	private IHabitacionService habitacionService;
+	@Autowired
+	private IAutorService autorService;
 	
 
 	
@@ -38,61 +45,58 @@ public class ProyectoPaU2HcApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-/*
-		
-		Hotel hotel= new Hotel();
-		hotel.setNombre("Hilton colon");
-		hotel.setDireccion("Av asdas");
-			
-		Habitacion habi=new Habitacion();
-		habi.setNumero("1A");
-		
-		 List<Habitacion> h= new ArrayList<>();
-		 h.add(habi);
-		hotel.setHabitaciones(h);
-		habi.setHotel(hotel);
-		hotelService.insertar(hotel);
-	*/	
-		
-		
-		//hotel1.setNombre("Gran Colombia"); 
-//	
-		
-	//hotelService.actualizar(hotel1);   
-//		hotelService.borrar(1);
 
-	
 		
-		/*
-		Hotel hotel1=hotelService.buscar(1);
-		  Habitacion habitacion= new Habitacion();
-		 
-		  habitacion.setHotel(hotel1);
-		  habitacion.setNumero("A3");
-		  
-		 
-		  habitacionService.insertar(habitacion);
-		*/
+		//Autor
+		Autor autor= new Autor();
+		autor.setNombre("WS");
 		
 		
-		  
-		/*
-		//eliminar una habitacion sin casdade, afecta unicamente a la habitacion mas no a el hotel
-		 Habitacion h2= habitacionService.buscar(9);
-		  habitacionService.eliminar(9);  
-	*/	 
+		//Libros
+		Libro libro1= new Libro();
+		libro1.setNombre("P.Web");
+		libro1.setEditorial("Pearson");
+		
+		Libro libro2= new Libro();
+		libro2.setNombre("Redes");
+		libro2.setEditorial("Bosco");
+		
+		Set<Libro> libros = new HashSet<>();
+		Set<Autor> autores = new HashSet<>();
 		
 		
-		  Hotel hotel= hotelService.buscar(1);
 		
-		  
-	 hotel.getHabitaciones().forEach(System.out::println);
-		  
-		 // hotel.getHabitaciones().stream().forEach(System.out::println);
-		 // habitaciones.stream().forEach(System.out::println);
-		   
-		   //colsultar hotel nombre e imprimir todas sus habitaciones
-		 
+		libros.add(libro1);
+		libros.add(libro2);
+		autores.add(autor);
+		
+		libro1.setAutores(autores);
+		autor.setLibros(libros);
+		autorService.insertar(autor);
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		   
 		
 	}
